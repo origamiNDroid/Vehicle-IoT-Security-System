@@ -2,11 +2,9 @@
 #include <Wire.h>
 #include <Adafruit_LIS3DH.h>
 #include <Adafruit_Sensor.h>
+#include "HomeWiFiCredentials.h"
 #define LIS3DH_CS D2 //ESP8266 Serial Data 
 #define LIS3DH_CLK D1 //ESP8266 Serial Clock
-
-const char *ssid = "ATTcs8D5kI";
-const char *password = "3x5t4va+tyf5";
 
 //const int analogInPin = 0;  // Analog input pin that the potentiometer is attached to
 int sensorValue = 0;        // value read from acc
