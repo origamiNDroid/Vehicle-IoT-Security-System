@@ -1,4 +1,10 @@
 # Vehicle IoT Security System
 An IoT security system for the theft prevention of vehicles.  This project was created at HackGT 2020 and was inspired by a rise in vehicle theft in my local community. I hope to make this a noninvasive product that is easy to reproduce and deploy. 
+# Purpose 
+Many vehicles are equipped with alarms. Unfortunately, the current alarm systems are not enough. Malicious events involving vehicles occur when the victim is farthest away from the vehicle. Vehicles are often stolen at night and right from the victim's home parking. The problem is that it is difficult to hear alarms from inside a home and thiefs and other malicious entities are aware of this. The solution I propose is to reimagine current alarms but within the realm of IoT or Internet of Things. By creating an IoT enabled device a user is able to hear alarms sound from inside the home as opposed to the outside. Now with the Vehicle IoT Security System users all over the globe will be prepared.
 # System Diagram
 ![](https://github.com/origamiNDroid/Vehicle-IoT-Security-System/blob/main/Vehicle%20IoT%20Security.jpg)
+# HackGT 2020 Progress Summary
+As of October 18, 2020 at 7:00am EST a functional demo and prototype of the vehicle device and the home device has been created. The vehicle device consists of an ESP8266 NodeMCU v1.0, a 9V battery, and an Adafruit LIS3DH Triple-Axis Accelerometer Breakout Board. This device connects to a nearby network of the user's choosing and is meant to be placed inside a vehicle. If tampering occurs (theft, tow truck, vandalism, angry significant other, etc.), the accelerometer will sense the event and the ESP8266 will send the data over a client and server network connection with home device via a url.
+The home device consists of another ESP8266 NodeMCU v1.0, a push button, and a buzzer (I was expecting company so I went for the quieter route, but in reality I would use a speaker instead). If the data received by the home device from the vehicle device confirms tampering, the alarm will sound via a speaker (or in this case buzzer). The alarm is disabled via push button until another tampering event occurs. 
+
