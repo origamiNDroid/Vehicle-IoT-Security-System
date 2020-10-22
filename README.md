@@ -5,8 +5,11 @@ Many vehicles are equipped with alarms. Unfortunately, the current alarm systems
 # System Diagram
 ![](https://github.com/origamiNDroid/Vehicle-IoT-Security-System/blob/main/Vehicle%20IoT%20Security.jpg)
 # HackGT 2020 Progress Summary
-As of October 18, 2020 at 7:00am EST a functional demo and prototype of the vehicle device and the home device has been created. The vehicle device consists of an ESP8266 NodeMCU v1.0, a 9V battery, and an Adafruit LIS3DH Triple-Axis Accelerometer Breakout Board. This device connects to a nearby network of the user's choosing and is meant to be placed inside a vehicle. If tampering occurs (theft, tow truck, vandalism, angry significant other, etc.), the accelerometer will sense the event and the ESP8266 will send the data over a client and server network connection with home device via a url. See the image below for the breadboard layout of the vehicle device.
+As of October 18, 2020 at 7:00am EST a functional demo and prototype of the vehicle device and the home device has been created. The vehicle device consists of an ESP8266 NodeMCU v1.0, a 9V battery, and an Adafruit LIS3DH Triple-Axis Accelerometer Breakout Board. 
+# Vehicle Device
+This device connects to a nearby network of the user's choosing and is meant to be placed inside a vehicle. If tampering occurs (theft, tow truck, vandalism, angry significant other, etc.), the accelerometer will sense the event and the ESP8266 will send the data over a client and server network connection with home device via a url. See the image below for the breadboard layout of the vehicle device.
 ![](https://github.com/origamiNDroid/Vehicle-IoT-Security-System/blob/main/bbpic_vehicledevice.JPG)
+# Home Device
 The home device consists of another ESP8266 NodeMCU v1.0, a push button, and a buzzer (I was expecting company so I went for the quieter route, but in reality I would use a speaker instead). If the data received by the home device from the vehicle device confirms tampering, the alarm will sound via a speaker (or in this case buzzer). The alarm is disabled via push button until another tampering event occurs. The home device is powered through the NodeMCU's micro-usb type b port. See the image below for the breadboard layout of the home device.
 ![](https://github.com/origamiNDroid/Vehicle-IoT-Security-System/blob/main/bbpic_homedevice.JPG)
 # Note
