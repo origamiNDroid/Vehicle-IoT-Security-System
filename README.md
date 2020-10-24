@@ -11,7 +11,7 @@ The vehicle device consists of an ESP8266 NodeMCU v1.0, a 9V battery, and an Ada
 
 ![](https://github.com/origamiNDroid/Vehicle-IoT-Security-System/blob/main/bbpic_vehicledevice.JPG)
 # Home Device
-The home device consists of another ESP8266 NodeMCU v1.0, a push button, and a buzzer (I was expecting company so I went for the quieter route, but in reality I would use a speaker instead). If the data received by the home device from the vehicle device confirms tampering (theft, tow truck, vandalism, angry significant other, etc.), the alarm will sound via a speaker (or in this case buzzer). The alarm is disabled via push button until another tampering event occurs. The home device is powered through the NodeMCU's micro-usb type b port. See the image below for the breadboard layout of the home device.
+The home device consists of another ESP8266 NodeMCU v1.0, a push button, and a buzzer (I was expecting company so I went for the quieter route, but in reality I would use a speaker instead). The home device is the server. If the data received by the home device from the vehicle device confirms tampering (theft, tow truck, vandalism, angry significant other, etc.), the alarm will sound via a speaker (or in this case buzzer). The alarm is disabled via push button until another tampering event occurs. The home device is powered through the NodeMCU's micro-usb type b port. See the image below for the breadboard layout of the home device.
 
 ![](https://github.com/origamiNDroid/Vehicle-IoT-Security-System/blob/main/bbpic_homedevice.JPG)
 # Note
